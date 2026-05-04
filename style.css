@@ -1,0 +1,159 @@
+/* root colors */
+:root {
+    --darkBlue: #0D21A1;
+    --white: #EEF0F2;
+    --transparentWhite: #eef0f283;
+    --brown: #34312D;
+    --black: #14110F;
+    --lightBlue: #3185FC;
+}
+/* body stuff like font and colors */
+body {
+    background-color: var(--black);
+    color: var(--white);
+    text-shadow: 1px 1px 1px black;
+    padding: 0px;
+    margin: 0px;
+    overflow-x: hidden;
+}
+/* navbar */
+nav {
+    width: 100vw;
+    margin: 0px;
+    padding: 0px;
+    border: 1px solid var(--black);
+    background-color: var(--transparentWhite);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+nav ul {
+    margin: none;
+    display: flex;
+    justify-content: space-around;
+}
+nav a {
+    padding: 5px;
+    background-color: var(--darkBlue);
+    color: #EEF0F2;
+}
+/* full body  */
+#body {
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    overflow-x: hidden;
+}
+#body::-webkit-scrollbar {
+    visibility: hidden;
+}
+#body div {
+    scroll-snap-align: center;
+}
+/* hero image stuff */
+#hero {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(stuff/galaxy.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+}
+#hiMyName {
+    text-align: left;
+}
+#hero h3 {
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    font-size: 2em;
+}
+#hero h1{
+    color: aliceblue;
+    text-shadow: 2px 2px 2px black;
+    font-size: 5em;
+}
+/* about me  */
+#aboutMe {
+    width: 80vw;
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--lightBlue);
+    padding: 5px;
+    justify-self: center;
+    margin-top: 20px;
+}
+#aboutMe img {
+    width: 30%;
+}
+/* carousel */
+#projectList {
+    padding: 10px;
+    background-color: var(--brown);
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+.thingy {
+    box-sizing: border-box;
+    background-color: var(--transparentWhite);
+    padding: 5px;
+    height: 75vh;
+    flex: 0 0 100%;
+    flex-direction: column;
+    border: 1px solid red;
+    scroll-snap-align: center;
+}
+
+.thingy:nth-child(even) {
+    background-color: #14110f5f;
+    color: white;
+}
+.thingy h3 {
+    font-size: 48px;
+}
+.thingy a {
+    background-color: var(--lightBlue);
+    text-decoration: none;
+    padding: 7px 25px;
+    border-radius: 20px;
+}
+/* 5 year plan stuff */
+ol {
+    display: flex;
+    width: 100vw;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    padding: 10px;
+}
+ol section {
+    height: 40vh;
+    display: flex;
+    border: 1px solid red;
+    flex-direction: column;
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+    background-color: var(--brown);
+}
+ol section h2 {
+    font-size: 48px;
+    color: var(--lightBlue);
+    text-shadow: #3185FC 1px 1px 1px;
+}
+/* ending links */
+#finalLinks {
+    background-color: var(--brown);
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+#finalLinks a {
+    padding: 10px;
+    background-color: #3185FC;
+    border-radius: 20px;
+    color: var(--white);
+    text-decoration: none;
+}
