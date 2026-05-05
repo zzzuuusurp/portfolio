@@ -35,8 +35,14 @@ nav ul {
 }
 nav a {
     padding: 5px;
-    background-color: var(--darkBlue);
+    background-color: gray;
+    height: 100%;
     color: #EEF0F2;
+}
+nav a:hover {
+    background-color: white;
+    border: 1px solid black;
+    color: black;
 }
 /* full body  */
 #body {

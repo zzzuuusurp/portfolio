@@ -1,0 +1,135 @@
+body {
+    overflow-x: hidden;
+}
+#body {
+    display: flex;
+}
+nav {
+    width: 100vw;
+    margin: 0px;
+    padding: 0px;
+    border: 1px solid white;
+    background-color: black;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+nav ul {
+    margin: none;
+    display: flex;
+    justify-content: space-around;
+}
+nav a {
+    padding: 5px;
+    background-color: var(--darkBlue);
+    color: #EEF0F2;
+}
+nav a:hover {
+    color: lightpink;
+}
+#leftSide {
+    width: 60vw;
+    padding: 10px;
+}
+h1 {
+    color: darkslateblue;
+    font-size: 64px;
+}
+h2 {
+    font-size: 48px;
+}
+h3 {
+    font-size: 32px;
+}
+h5 {
+    font-size: 24px;
+}
+#aboutMe {
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 5px;
+    background-color: lightgray;
+}
+#projects {
+    margin-top: 20px;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: gray;
+}
+#projects h2 {
+    color: white;
+}
+#projects section {
+    border-top: 1px solid black;
+    padding: 5px;
+    width: 100%;
+    background-color: lightskyblue;
+}
+#projects section:nth-child(even) {
+    background-color: lightsalmon;
+}
+#zooLogix {
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+#calc {
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+#rightSide {
+    width: 40vw;
+    border-left: 3px solid black;
+    align-items: center;
+    padding: 10px;
+}
+#pfp {
+    display: block;
+    align-self: center;
+    justify-self: center;
+    width: 200px;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-bottom: 20px;
+}
+#contactInfo {
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 30px;
+    background-color: yellow;
+    margin-bottom: 20px;
+}
+#contactInfo a {
+    background-color: darkcyan;
+    color: white;
+    border-radius: 10px;
+    height: fit-content;
+    border: 1px solid black;
+    text-decoration: none;
+    padding: 10px;
+}
+#contactInfo li {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    align-items: center;
+}
+#skills {
+    padding: 10px;
+    border: 1px solid black;
+    background-color: cornflowerblue;
+    border-radius: 30px;
+    margin-bottom: 20px;
+}
+#education {
+    border: 1px solid black;
+    border-radius: 30px;
+    padding: 10px;
+    background-color: tomato;
+}
+#education section {
+    align-items: flex-start;
+}
