@@ -13,6 +13,7 @@ function createCarouselCards() {
             <h2>${project.title}</h2>
             <p>${project.desc}</p>
             <p><em>${project.useDesc}</em></p>
+            <a href=${project.href} target='_blank'>View Project</a>
             <a href="case_study.html" class="blueBtn">View Case Study</a>
             <div class="buttonList"></div>
         `;

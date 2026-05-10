@@ -6,6 +6,10 @@
     --brown: #34312D;
     --black: #14110F;
     --lightBlue: #3185FC;
+    --cartYellow: #f6a91b;
+    --cartRed: #d74f27;
+    --cartGreen: #019b83;
+    --cartBlue: #0c3c60;
 }
 /* body stuff like font and colors */
 body {
@@ -140,17 +144,57 @@ nav a:hover {
 }
 /* cart section */
 #cart {
-    background-color: yellow;
+    background-color: var(--cartYellow);
     padding: clamp(5px, 5vw, 15px);
+}
+#cart h2 {
+    font-size: clamp(2em, 48px, 3em);
+    text-align: center;
 }
 #cart ol {
     display: flex;
     flex-direction: column;
-    list-style-type: armenian;
-    padding: 5px;
+    list-style-type: decimal;
+    overflow-x: visible;
+}
+#cart ol li {
+    margin: clamp(3px, 2vh, 10px);
+    font-size: clamp(24px, 1.5em, 36px);
+}
+#cart ol li:last-child {
+    color: var(--cartRed);
+}
+#cart ol li:nth-child(2) {
+    color: var(--cartBlue);
+}
+#cart ol li:first-of-type {
+    color: var(--cartGreen);
+}
+#cart img {
+    display: block;
+    justify-self: center;
+}
+#cart ol::-webkit-scrollbar {
+    display: none;
 }
 .cart {
-    background-color: var(--lightBlue);
+    padding: 3vh 4vw;
+    margin-bottom: 3vh;
+    border-radius: 20px;
+    border: 1px solid black;
+}
+.cart:last-child {
+    background-color: var(--cartRed);
+}
+.cart:nth-child(even) {
+    background-color: var(--cartBlue);
+}
+.cart:first-of-type {
+    background-color: var(--cartGreen);
+}
+
+.cart h4 {
+    text-shadow: 1px 1px 1px gray;
 }
 
 /* carousel */
@@ -193,6 +237,7 @@ nav a:hover {
     align-self: center;
     justify-self: center;
     text-align: center;
+    margin-top: 10px;
     border: 1px solid var(--black);
     color: var(--white);
     width: 40%;
@@ -256,17 +301,24 @@ ol section h2 {
 }
 /* ending links */
 #finalLinks {
-    background-color: var(--brown);
+    background-color: var(--cartGreen);
     padding: 10px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 #finalLinks a {
     padding: 10px;
-    background-color: #3185FC;
+    background-color: var(--cartGreen);
     border-radius: 20px;
     color: var(--white);
     text-decoration: none;
+    display: block;
+    width: 30%;
+    text-align: center;
+}
+#finalLinks a:hover {
+    background-color: var(white);
+    color: var(--black);
 }
 
 /* case study */
@@ -350,6 +402,50 @@ h1.centerHeader {
 
 .moveRight {
     animation: moveRight 1s ease-out;
+}
+/* fomr stuff */
+#form h2 {
+    text-align: center;
+    text-decoration: underline;
+}
+form {
+    display: flex;
+    width: 90vw;
+    margin: 10px auto;
+    flex-direction: column;
+    background-color: var(--white);
+    border-radius: 20px;
+}
+form input {
+    width: 80%;
+    height: clamp(15px, 5vh, 30px);
+    margin: clamp(10px, 4vh, 25px) auto;
+    border-radius: 10px;
+}
+input#things {
+    height: fit-content;
+    padding: 5px;
+    padding-bottom: 100px;
+    text-align: start;
+}
+.thanks {
+    display: block;
+    width: fit-content;
+    margin: auto;
+}
+#socialButtons {
+    display: block;
+    width: fit-content;
+    margin: auto;
+}
+#socialButtons li {
+    margin: 8px auto;
+}
+#socialButtons a {
+    color: var(--lightBlue);
+}  
+#socialButtons a:hover {
+    color: var(--cartGreen);
 }
 
 @keyframes fadeIn {
