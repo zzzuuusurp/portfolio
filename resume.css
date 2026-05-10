@@ -14,11 +14,10 @@ nav {
     top: 0;
     left: 0;
     z-index: 1000;
-}
-nav ul {
     margin: none;
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 nav a {
     padding: 5px;

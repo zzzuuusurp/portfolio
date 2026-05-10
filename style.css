@@ -9,6 +9,8 @@
 }
 /* body stuff like font and colors */
 body {
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--black);
     color: var(--white);
     text-shadow: 1px 1px 1px black;
@@ -27,16 +29,18 @@ nav {
     top: 0;
     left: 0;
     z-index: 1000;
-}
-nav ul {
     margin: none;
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    text-align: center;
 }
 nav a {
     padding: 5px;
     background-color: gray;
     height: 100%;
+    width: 100%;
+    text-decoration: none;
     color: #EEF0F2;
 }
 nav a:hover {
@@ -53,19 +57,20 @@ nav a:hover {
 #body::-webkit-scrollbar {
     visibility: hidden;
 }
-#body div {
-    scroll-snap-align: center;
-}
 /* hero image stuff */
 #hero {
+    scroll-snap-align: center;
     width: 100vw;
     height: 100vh;
+    margin: 0px auto;
+    padding: 0px;
     background-image: url(stuff/galaxy.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     display: grid;
     justify-content: center;
     align-items: center;
+    animation: fadeIn 3s forwards ease-out; 
 
 }
 #hiMyName {
@@ -75,50 +80,134 @@ nav a:hover {
     color: white;
     text-shadow: 2px 2px 2px black;
     font-size: 2em;
+    animation: moveRight 4s ease-out;
 }
-#hero h1{
+#hero h1 {
     color: aliceblue;
     text-shadow: 2px 2px 2px black;
     font-size: 5em;
+    animation: moveLeft 4s forwards ease-out;
 }
 /* about me  */
 #aboutMe {
-    width: 80vw;
+    scroll-snap-align: top;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: space-around;
-    background-color: var(--lightBlue);
-    padding: 5px;
+    padding: clamp(5px, 20vh, 100px), clamp(10px, 10vw, 80px);
     justify-self: center;
-    margin-top: 20px;
+    margin: clamp(20px, 10vh, 50px);
+}
+#aboutMe section {
+    background-color: var(--darkBlue);
+    color: var(--white);
+    border: 1px solid white;
+    border-radius: 20px;
+    width: clamp(300px, 50vw, 60%);
+    padding: clamp(10px, 5vh, 20px);
+}
+#aboutMe section h2 {
+    font-size: clamp(2em, 48px, 5em);
+    text-shadow: 2px 2px 2px lightgray;
+}
+#aboutMe section h4 {
+    font-size: clamp(1.5em, 32px, 3em);
+    text-shadow: 1px 1px 1px lightgray;
+}
+#aboutMe section ul {
+    border-top: 2px solid white;
+    padding: clamp(10px, 5vh, 20px) 0px;
+}
+#aboutMe section ul li {
+    display: block;
+    width: 100%;
+    border-top: 1px solid white;
+    padding: clamp(5px, 2vh, 10px) 0px;
+    font-size: clamp(1em, 24px, 2em);
+}
+#aboutMe section ul li:first-child {
+    border-top: none;
 }
 #aboutMe img {
-    width: 30%;
+    width: clamp(200px, 30%, 30vw);
+    justify-self: flex-end;
+    border-radius: 20px;
+    border: 1px solid white;
 }
 /* carousel */
 #projectList {
+    scroll-snap-align: center;
+    box-sizing: border-box;
+    min-height: 100vh;
     padding: 10px;
     background-color: var(--brown);
     display: flex;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
 }
+#projectList::-webkit-scrollbar {
+    visibility: hidden;
+}
 .thingy {
     box-sizing: border-box;
     background-color: var(--transparentWhite);
-    padding: 5px;
-    height: 75vh;
+    padding: clamp(10px, 5vh, 20px);
+    margin: auto;
+    height: clamp(85vh, 100%, 100vh);
     flex: 0 0 100%;
     flex-direction: column;
-    border: 1px solid red;
     scroll-snap-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
-
-.thingy:nth-child(even) {
-    background-color: #14110f5f;
-    color: white;
+.thingy h2 {
+    font-size: clamp(2em, 48px, 5em);
+    text-shadow: 2px 2px 2px lightgray;
+}
+.thingy p {
+    font-size: clamp(1em, 24px, 2em);
+}
+.thingy a {
+    display: block;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    border: 1px solid var(--black);
+    color: var(--white);
+    width: 40%;
+}
+.buttonList {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: clamp(10px, 10vh, 30px);
+}
+.buttonList button {
+    text-decoration: none;
+    padding: 7px 25px;
+    border-radius: 20px;
+}
+.nextBtn {
+    background-color: var(--lightBlue);
+}
+.prevBtn {
+    background-color: var(--darkBlue);
+    color: var(--white);
+}
+.nextBtn:hover {
+    background-color: white;
+    color: black;
+}
+.prevBtn:hover {
+    background-color: white;
+    color: black;
 }
 .thingy h3 {
-    font-size: 48px;
+    font-size: clamp(1.5em, 32px, 3em);
 }
 .thingy a {
     background-color: var(--lightBlue);
@@ -137,7 +226,6 @@ ol {
 ol section {
     height: 40vh;
     display: flex;
-    border: 1px solid red;
     flex-direction: column;
     box-sizing: border-box;
     flex: 0 0 100%;
@@ -162,4 +250,119 @@ ol section h2 {
     border-radius: 20px;
     color: var(--white);
     text-decoration: none;
+}
+
+/* case study */
+#chooseProject {
+    width: 70vw;
+    margin: 20px auto;
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+}
+
+.centerHeader {
+    text-align: center;
+}
+
+h1.centerHeader {
+    font-size: clamp(2em, 48px, 5em);
+    text-shadow: 2px 2px 2px lightgray;
+}
+
+#content {
+    box-sizing: border-box;
+    width: 100vw;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 80vh;
+}
+
+.step {
+    scroll-snap-align: center;
+    background-color: var(--darkBlue);
+    color: var(--white);
+    padding: clamp(5px, 2vh, 10px) clamp(10px, 2vw, 20px);
+    box-sizing: border-box;
+    min-height: 100%;
+    height: fit-content;
+    margin: clamp(10px, 2vh, 20px) auto;
+}
+
+.step:nth-child(even) {
+    background-color: var(--lightBlue);
+    color: var(--black);
+}
+
+.list {
+    list-style: none;
+    padding: 0px;
+    padding: clamp(5px, 2vh, 10px) clamp(10px, 2vw, 20px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.list li {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    margin: clamp(10px, 5vh, 20px) auto;
+    border-top: 1px solid white;
+    padding: clamp(5px, 2vh, 10px) 0px;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.fadeIn {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.spin {
+    animation: spinFadeIn 2s ease-in;
+}
+
+.moveLeft {
+    animation: moveLeft 1s ease-out;
+}
+
+.moveRight {
+    animation: moveRight 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes spinFadeIn {
+    from {opacity: 0; transform: rotate(0deg);}
+    to {opacity: 1; transform: rotate(360deg);}
+}
+
+@keyframes moveLeft {
+    from {transform: translateX(100%);}
+    to {transform: translateX(0);}
+}
+
+@keyframes moveRight {
+    from {transform: translateX(-100%);}
+    to {transform: translateX(0);}
+}
+
+@media (max-width: 600px) {
+    nav {
+        bottom: 0;
+        top: auto;
+        left: auto;
+        right: 0;
+    }
+    nav a {
+        margin: 5px 0px;
+    }
 }
