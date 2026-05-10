@@ -93,7 +93,7 @@ nav a:hover {
     scroll-snap-align: top;
     box-sizing: border-box;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: space-around;
     padding: clamp(5px, 20vh, 100px), clamp(10px, 10vw, 80px);
@@ -131,11 +131,28 @@ nav a:hover {
     border-top: none;
 }
 #aboutMe img {
-    width: clamp(200px, 30%, 30vw);
+    width: clamp(200px, 30%, 400px);
+    height: auto;
+    align-self: center;
     justify-self: flex-end;
     border-radius: 20px;
     border: 1px solid white;
 }
+/* cart section */
+#cart {
+    background-color: yellow;
+    padding: clamp(5px, 5vw, 15px);
+}
+#cart ol {
+    display: flex;
+    flex-direction: column;
+    list-style-type: armenian;
+    padding: 5px;
+}
+.cart {
+    background-color: var(--lightBlue);
+}
+
 /* carousel */
 #projectList {
     scroll-snap-align: center;

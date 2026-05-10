@@ -1,0 +1,4 @@
+export const years = {
+    one: 'I will finish up my Senior Year of high school. I\'ll be taking classes such as AP Physcis and AP Lit in order to get more college credits to get a head start on my classes. I will start applying for scholarships and try to figure out which colleges would be best for a field I want to work in. Although I am currently undecided, I am considering going to a school that has good Computer Science programs.',
+    two: "I will most likely go to fresno state for the first two years, with the intent of transferring my credits over to a different school in the future. Since Fresno State is more local, I wouldn't need to worry about living costs, which should help me out in the long run."
+}

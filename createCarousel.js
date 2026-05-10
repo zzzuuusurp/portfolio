@@ -16,12 +16,13 @@ function createCarouselCards() {
             <a href="case_study.html" class="blueBtn">View Case Study</a>
             <div class="buttonList"></div>
         `;
-        if (project.title != 'EECU WiseUp Calculator') {
-            const prevBtn = document.createElement('button');
-            prevBtn.classList.add('prevBtn');
-            prevBtn.textContent = 'Previous';
-            card.querySelector('.buttonList').appendChild(prevBtn);
-        } //prevents a previous button on the first card
+        const prevBtn = document.createElement('button');
+        prevBtn.classList.add('prevBtn');
+        prevBtn.textContent = 'Previous';
+        card.querySelector('.buttonList').appendChild(prevBtn);
+        if (project.title === 'EECU WiseUp Calculator') {
+            prevBtn.disabled = true;
+        }
         const nextBtn = document.createElement('button');
         nextBtn.classList.add('nextBtn');
         nextBtn.textContent = 'Next';
@@ -42,12 +43,13 @@ function createCarouselCards() {
         prevBtn.classList.add('prevBtn');
         prevBtn.textContent = 'Previous';
         card.querySelector('.buttonList').appendChild(prevBtn);
-        if (project.title != 'Track & Field / Cross Country') {
-            const nextBtn = document.createElement('button');
-            nextBtn.classList.add('nextBtn');
-            nextBtn.textContent = 'Next';
-            card.querySelector('.buttonList').appendChild(nextBtn);
-        } //prevents a next button on the last card
+        const nextBtn = document.createElement('button');
+        nextBtn.classList.add('nextBtn');
+        nextBtn.textContent = 'Next';
+        card.querySelector('.buttonList').appendChild(nextBtn);
+        if (project.title === 'Track & Field / Cross Country') {
+            nextBtn.disabled = true;
+        }
         projectList.appendChild(card);
     }
     console.log('made project cards');

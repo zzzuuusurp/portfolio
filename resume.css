@@ -33,16 +33,16 @@ nav a:hover {
 }
 h1 {
     color: darkslateblue;
-    font-size: 64px;
+    font-size: clamp(2em, 64px, 3em);
 }
 h2 {
-    font-size: 48px;
+    font-size: clamp(1.6em, 48px, 1.9em);
 }
 h3 {
-    font-size: 32px;
+    font-size: clamp(1.3em, 36px, 1.6em);
 }
 h5 {
-    font-size: 24px;
+    font-size: clamp(1.1em, 24px, 1.3em);
 }
 #aboutMe {
     border: 1px solid black;
