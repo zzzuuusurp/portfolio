@@ -37,7 +37,7 @@ function createCarouselCards() {
         card.innerHTML = `
             <h2>${project.title}</h2>
             <p>${project.desc}</p>
-            <a href="${project.href}" class="blueBtn">View</a>
+            <a href="${project.href}" target="_blank" class="blueBtn">View</a>
             <div class="buttonList"></div>
         `;
         const prevBtn = document.createElement('button');

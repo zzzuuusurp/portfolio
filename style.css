@@ -92,6 +92,9 @@ nav a:hover {
     font-size: 5em;
     animation: moveLeft 4s forwards ease-out;
 }
+button {
+    box-shadow: 2px 2px 2px black;
+}
 /* about me  */
 #aboutMe {
     scroll-snap-align: top;
@@ -224,6 +227,7 @@ nav a:hover {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    animation: fadeIn 200ms forwards ease-out;
 }
 .thingy h2 {
     font-size: clamp(2em, 48px, 5em);
@@ -278,26 +282,46 @@ nav a:hover {
     border-radius: 20px;
 }
 /* 5 year plan stuff */
-ol {
+#yearPlans {
     display: flex;
-    width: 100vw;
+    width: fit-content;
+    height: calc(100vh - 20vh);
+    border: 1px solid red;
     overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-    padding: 10px;
+    margin: 0px;
 }
-ol section {
-    height: 40vh;
-    display: flex;
+#yearPlans::-webkit-scrollbar {
+    display: none;
+}
+.year {
+    display: none;
+    animation: spinFadeIn 500ms forwards;
+    height: 100%;
+    width: 100vw;
+    justify-content: space-between;
     flex-direction: column;
     box-sizing: border-box;
-    flex: 0 0 100%;
+    padding: 10px 20px;
     scroll-snap-align: center;
-    background-color: var(--brown);
+    background-color: var(--cartRed);
 }
-ol section h2 {
-    font-size: 48px;
-    color: var(--lightBlue);
-    text-shadow: #3185FC 1px 1px 1px;
+.year:first-child {
+    display: flex;
+}
+.year:nth-child(odd) {
+    background-color: var(--darkBlue);
+}
+.year:nth-child(odd) h2 {
+    color: var(--black);
+    text-shadow: 2px 2px 2px white;
+}
+.year h2 {
+    font-size: clamp(3em, 48px, 3.5em);
+    color: var(--cartGreen);
+    text-shadow: var(--black) 2px 2px 2px;
+}
+.year p {
+    font-size: clamp(1.2em, 24px, 1.7em);
 }
 /* ending links */
 #finalLinks {
@@ -437,9 +461,17 @@ input#things {
     display: block;
     width: fit-content;
     margin: auto;
+    list-style: none;
 }
 #socialButtons li {
+    display: block;
     margin: 8px auto;
+    background-color: var(--cartRed);
+    padding: 10px 25px;
+    border-radius: 20px;
+}
+#socialButtons li:nth-child(even) {
+    background-color: var(--cartBlue);
 }
 #socialButtons a {
     color: var(--lightBlue);
