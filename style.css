@@ -216,7 +216,6 @@ button {
 }
 .thingy {
     box-sizing: border-box;
-    background-color: var(--transparentWhite);
     padding: clamp(10px, 5vh, 20px);
     margin: auto;
     height: clamp(85vh, 100%, 100vh);
@@ -228,12 +227,21 @@ button {
     justify-content: space-between;
     align-items: center;
     animation: fadeIn 200ms forwards ease-out;
+    background-color: var(--transparentWhite);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .thingy h2 {
+    color: var(--black);
+    background-color: var(--transparentWhite);
+    padding: 5px;
     font-size: clamp(2em, 48px, 5em);
     text-shadow: 2px 2px 2px lightgray;
 }
 .thingy p {
+    background-color: var(--transparentWhite);
+    color: var(--black);
+    padding: 5px;
     font-size: clamp(1em, 24px, 2em);
 }
 .thingy a {

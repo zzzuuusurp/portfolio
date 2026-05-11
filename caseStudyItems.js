@@ -4,6 +4,7 @@ export const projects = {
     eecu: {
         title: 'EECU WiseUp Calculator',
         href: 'https://budget-calcalalatora.netlify.app/',
+        img: 'stuff/eecuSS.png',
         techStack: ['HTML5, CSS3, and Vanilla JavaScript.', 'Visual Studio Code for development and Git/GitHub for version control.', 'Hosted via Netlify to ensure global accessibility and performance.'],
         conceptsTitle: ['DOM Management', 'Chart Management', 'Responsive Design', 'Fetch()'],
         concepts: ["I rooted my understanding of DOMs in order to create new expenses and root them into the calculations.", "I learned Chart.js in order to showcase a chart of how much of the budget an expense takes up.", "I effectively utilized media queries to create responsive designs for mobile devices, like phones and tablets", "I discovered the effectiveness of Fetch to grab a database from another source and use it in my career list."],
@@ -17,6 +18,7 @@ export const projects = {
     bioshield: {
         title: 'BioShield Website',
         href: 'https://bioshield-jacobsmart.netlify.app/',
+        img: 'stuff/bioshield.png',
         techStack: ['HTML5, CSS3, and Vanilla JavaScript.', 'Visual Studio Code for development and Git/GitHub for version control.', 'Hosted via Netlify to ensure global accessibility and performance.'],
         conceptsTitle: ['DOM Manageement', 'CSS Design', 'Responsive Design', 'AI as a tool'],
         concepts: ["I learned how to use Javascript to read what kind of item the user was buying, put it in the list, and add a total.", "I learned how to effectively use classes and IDs to style the layout and colors to fit the theme I was going for.", "I mastered responsive design in order to create an effective design for both tablet and mobile screens.", "I utilized AI tools in order to check for debugging errors and check for grammatical errors in my product descriptions."],
@@ -30,6 +32,7 @@ export const projects = {
     toDo: {
         title: 'To-Do List',
         href: 'https://todoappwoohoo.netlify.app/',
+        img: 'stuff/toDoScreenshot.png',
         techStack: ['HTML5, CSS3, and Vanilla JavaScript.', 'Visual Studio Code for development and Git/GitHub for version control.', 'Hosted via Netlify to ensure global accessibility and performance.'],
         conceptsTitle: ['DOM Creation', 'Object Storage', 'Drag and Drop', 'Local Storage'],
         concepts: ["I fully mastered the creation of DOMs in order to make the list of tasks appear.", "I skillfully utilized arrays and objects in order to store an ID, name, and status for every task.", "I learned how to use the draggable element in HTML in order to use JavaScript to reorder and remove items in the list", "I used local storage to save the items you complete, which allows the user to use the website as an actual list they can come back to."],
@@ -46,11 +49,13 @@ export const projects = {
 export const otherProjects = {
     paper: {
         title: 'Research Paper',
+        img: 'stuff/enrichment.jpg',
         desc: 'A short 4-page paper that highlights the benefits and downsides on how animal enrichment in zoos affect the animals themselves and the environment.',
         href: 'stuff/paper.pdf'
     },
     track: {
         title: 'Track & Field / Cross Country',
+        img: 'stuff/DSC_1484.jpg',
         desc: 'My 4-year career in Track and Cross Country, which has led me to run a 18:32 5k meter time in Cross Country and a 4:59 mile time in Track & Field',
         href: 'https://www.athletic.net/profile/JacobRodriguezRunner/feed'
     }

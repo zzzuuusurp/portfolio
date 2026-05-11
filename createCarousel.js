@@ -17,6 +17,7 @@ function createCarouselCards() {
             <a href="case_study.html" class="blueBtn">View Case Study</a>
             <div class="buttonList"></div>
         `;
+        card.style.backgroundImage = `url(${project.img})`;
         const prevBtn = document.createElement('button');
         prevBtn.classList.add('prevBtn');
         prevBtn.textContent = 'Previous';
@@ -40,6 +41,7 @@ function createCarouselCards() {
             <a href="${project.href}" target="_blank" class="blueBtn">View</a>
             <div class="buttonList"></div>
         `;
+        card.style.backgroundImage = `url(${project.img})`;
         const prevBtn = document.createElement('button');
         prevBtn.classList.add('prevBtn');
         prevBtn.textContent = 'Previous';
