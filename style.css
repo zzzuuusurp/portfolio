@@ -74,7 +74,7 @@ nav a:hover {
     display: grid;
     justify-content: center;
     align-items: center;
-    animation: fadeIn 3s forwards ease-out; 
+    animation: fade-in 3s forwards ease-out; 
 
 }
 #hiMyName {
@@ -186,6 +186,8 @@ button {
     margin-bottom: 3vh;
     border-radius: 20px;
     border: 1px solid black;
+    animation: fade-in linear;
+    animation-timeline: scroll(y);
 }
 .cart:last-child {
     background-color: var(--cartRed);
@@ -227,7 +229,7 @@ button {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    animation: fadeIn 200ms forwards ease-out;
+    animation: fade-in 200ms forwards ease-out;
     background-color: var(--transparentWhite);
     background-repeat: no-repeat;
     background-size: cover;
@@ -260,6 +262,7 @@ button {
     width: 100%;
     justify-content: space-between;
     margin-top: clamp(10px, 10vh, 30px);
+    background-color: #929292da;
 }
 .buttonList button {
     text-decoration: none;
@@ -416,13 +419,13 @@ h1.centerHeader {
     padding: clamp(5px, 2vh, 10px) 0px;
 }
 
-@keyframes fadeIn {
+@keyframes fade-in {
     from {opacity: 0;}
     to {opacity: 1;}
 }
 
-.fadeIn {
-    animation: fadeIn 1s ease-in-out;
+.fade-in {
+    animation: fade-in 1s ease-in-out;
 }
 
 .spin {
@@ -489,9 +492,9 @@ input#things {
     color: var(--cartGreen);
 }
 
-@keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
+@keyframes fade-in {
+    from {opacity: 0; scale: 0.8;}
+    to {opacity: 1; scale: 1;}
 }
 
 @keyframes spinFadeIn {
