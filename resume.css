@@ -132,3 +132,18 @@ h5 {
 #education section {
     align-items: flex-start;
 }
+
+@media screen and (max-width: 600px) {
+    #body {
+        flex-direction: column;
+    }
+    #leftSide {
+        width: 90vw;
+        margin: auto;
+    }
+    #rightSide {
+        width: 80vw;
+        margin: auto;
+        border-left: none;
+    }
+}

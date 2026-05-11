@@ -79,18 +79,19 @@ nav a:hover {
 }
 #hiMyName {
     text-align: left;
+    padding: 10px;
 }
 #hero h3 {
     color: white;
     text-shadow: 2px 2px 2px black;
     font-size: 2em;
-    animation: moveRight 4s ease-out;
+    animation: moveRight 2s ease-out;
 }
 #hero h1 {
     color: aliceblue;
     text-shadow: 2px 2px 2px black;
     font-size: 5em;
-    animation: moveLeft 4s forwards ease-out;
+    animation: moveLeft 2s forwards ease-out;
 }
 button {
     box-shadow: 2px 2px 2px black;
@@ -233,13 +234,13 @@ button {
 }
 .thingy h2 {
     color: var(--black);
-    background-color: var(--transparentWhite);
+    background-color: #929292da;
     padding: 5px;
     font-size: clamp(2em, 48px, 5em);
     text-shadow: 2px 2px 2px lightgray;
 }
 .thingy p {
-    background-color: var(--transparentWhite);
+    background-color: #929292da;
     color: var(--black);
     padding: 5px;
     font-size: clamp(1em, 24px, 2em);
@@ -517,5 +518,12 @@ input#things {
     }
     nav a {
         margin: 5px 0px;
+    }
+    #aboutMe {
+        flex-direction: column-reverse;
+    }
+    #aboutMe section {
+        margin: 10px auto;
+        width: 80vw;
     }
 }
